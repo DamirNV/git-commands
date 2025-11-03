@@ -229,6 +229,16 @@ modified: файл изменён относительно той версии, 
 staging. Чтобы добавить в staging последнюю версию, нужно выполнить 
 git add file.txt ещё раз.
 
+**Mermaid схема статуса файла в логах**
+
+```mermaid
+graph LR;
+  untracked -- "git add ." --> staged;
+  staged -- "git commit -m "Сообщение коммита"" --> tracked/comitted;
+  modified -- "git add ." --> staged;
+
+
+```
 
 ---
 
@@ -290,3 +300,5 @@ $ git commit -m "Исправить #334, добавить график темп
 наклонение (англ. imperative). Например: Use library mega_lib_300, 
 Fix exit button и так далее.
 Эти рекомендации сложились исторически, и им следуют многие проекты.
+
+
